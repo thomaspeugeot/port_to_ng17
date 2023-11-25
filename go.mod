@@ -1,4 +1,4 @@
-module github.com/thomaspeugeot/port_to_ng16
+module github.com/thomaspeugeot/port_to_ng17
 
 go 1.21
 

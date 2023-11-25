@@ -52,7 +52,7 @@ func main() {
 
 	}
 	if *allCommands {
-		cmd := exec.Command("rm", "-rf", "package-lock.json", "node_modules", "dist")
+		cmd := exec.Command("rm", "-rf", "package-lock.json", "node_modules", "dist", ".angular")
 
 		var stdBuffer bytes.Buffer
 		mw := io.MultiWriter(os.Stdout, &stdBuffer)
@@ -90,7 +90,7 @@ func main() {
 		log.Printf("command %s over and took %s", cmd, time.Since(start))
 	}
 	if *allCommands {
-		cmd := exec.Command("npx", "@angular/cli@16", "update", "@angular/core@16", "@angular/cli@16", "--allow-dirty", "--force")
+		cmd := exec.Command("npm", "uninstall", "@angular-material-components/datetime-picker")
 		var stdBuffer bytes.Buffer
 		mw := io.MultiWriter(os.Stdout, &stdBuffer)
 
@@ -108,7 +108,7 @@ func main() {
 		log.Printf("command %s over and took %s", cmd, time.Since(start))
 	}
 	if *allCommands {
-		cmd := exec.Command("npm", "install", "--save", "@angular-material-components/datetime-picker@16", "--force")
+		cmd := exec.Command("npx", "@angular/cli@17", "update", "@angular/core@17", "@angular/cli@17", "--allow-dirty", "--force")
 		var stdBuffer bytes.Buffer
 		mw := io.MultiWriter(os.Stdout, &stdBuffer)
 
@@ -126,7 +126,7 @@ func main() {
 		log.Printf("command %s over and took %s", cmd, time.Since(start))
 	}
 	if *allCommands {
-		cmd := exec.Command("npx", "@angular/cli@16", "update", "@angular/material@16", "--allow-dirty")
+		cmd := exec.Command("npx", "@angular/cli@17", "update", "@angular/material@17", "--allow-dirty")
 		var stdBuffer bytes.Buffer
 		mw := io.MultiWriter(os.Stdout, &stdBuffer)
 
@@ -162,7 +162,7 @@ func main() {
 		log.Printf("command %s over and took %s", cmd, time.Since(start))
 	}
 	if *allCommands {
-		cmd := exec.Command("npm", "install", "angular-split@16")
+		cmd := exec.Command("npm", "install", "angular-split@17")
 		var stdBuffer bytes.Buffer
 		mw := io.MultiWriter(os.Stdout, &stdBuffer)
 
